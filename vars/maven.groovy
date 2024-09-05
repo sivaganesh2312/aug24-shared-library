@@ -8,7 +8,7 @@ def call(Map config) {
         stage('git'){            
             steps {                
                 git url: "${config.url}",                    
-                branch: "${config.branch}"            
+                    branch: "${config.branch}"            
             }        
         }        
         stage('build') {            
