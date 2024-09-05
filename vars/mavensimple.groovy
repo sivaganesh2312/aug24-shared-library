@@ -1,6 +1,9 @@
 def call() {
     pipeline {
-    agent any    
+    agent any  
+    tools {
+        maven 'MAVEN_3.9.9'
+    }   
     stages {        
         stage('git'){            
             steps {                
@@ -14,5 +17,5 @@ def call() {
             }        
         }    
     }
-    }
+}
 }
